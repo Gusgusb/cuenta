@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Jonathan & Emma</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/wedding.css">
+    <script>
+      window.appUrl = "http://localhost:8000";
+    </script>
+  </head>
+  <body>
+    <div id="liston"><div class="anillo"></div></div>
+    <canvas id="rainHearts"></canvas>
+    <canvas id="heart"></canvas>
+    <div class="container text-center" style="margin-top: 6%;">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h1 class="names">Jonathan y Emma</h1>
+          <h3>Junio 29, 2019 4pm</h3>
+          <div class="countdown-container">
+            <div id="countDownGdl"></div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 3%; margin-bottom: 3%">
+          <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Como llegar al salón
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://www.google.com/maps/dir/?api=1&destination=21.102610, -104.425577" target="_blank">Google Maps</a>
+            <a class="dropdown-item" href="https://waze.com/ul?ll=21.102610,-104.425577&navigate=yes" target="_blank">Waze</a>
+            </div>
+          </div>
+          <br class="d-block d-sm-none">
+          <br class="d-block d-sm-none">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" title="información adicional">
+              ?
+          </button>
+          <br class="d-block d-sm-none">
+          <br class="d-block d-sm-none">
+          <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Como llegar a la iglesia
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://www.google.com/maps/dir/?api=1&destination=21.105855, -104.421988" target="_blank">Google Maps</a>
+            <a class="dropdown-item" href="https://waze.com/ul?ll=21.105855,-104.421988&navigate=yes" target="_blank">Waze</a>
+            </div>
+          </div>
+          <br>
+          <label>En Nayarit es una hora menos</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Hola!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="font-size: 16px; font-family: sans-serif;">
+            <p>
+                Queremos agredecerte por ser parte de este día tan especial para nosotros, muchas gracias :)
+            </p>
+            <p>
+                En este sitio encontraras información de como llegar al salón del evento o a la iglesia, solo tienes que dar clic
+                en algun boton y se abrirá la aplicación de Google Maps o Waze para indicarte como llegar dependiendo de tu ubicación.
+            </p>
+            <p>
+                Tambien en el siguiente enlace podras ver un panorama general de las rutas para llegar: <a href="https://je-wedding.000webhostapp.com/map.html" target="_blank">Ver Mapa</a>
+            </p>
+            <p>
+                La ceremonia comenzará a las 4 despues de ahi nos vemos en el salón de eventos el Ejidal.
+            </p>
+            <p>
+                <div class="alert alert-danger text-center" role="alert">!!IMPORTANTE!!</div>
+            </p>
+            <p>
+                Para nuestros amig@s que vendran de Jalisco tomen en cuenta que allá es una hora menos, es decir que mientras en Jalisco son las 4 PM en Nayarit son las 3 PM.
+                Gracias :)
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script id="countDownTemplate" type="text/template">
+      <div class="time <%= label %>">
+        <span class="count curr top"><%= curr %></span>
+        <span class="count next top"><%= next %></span>
+        <span class="count next bottom"><%= next %></span>
+        <span class="count curr bottom"><%= curr %></span>
+        <span class="label"><%= label %></span>
+      </div>
+    </script>
+    <script src="/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/lodash.min.js"></script>
+    <script src="/js/moment.min.js"></script>
+    <script src="/js/moment-timezone.min.js"></script>
+    <script src="/js/jquery.countdown.min.js"></script>
+    <script src="/js/countdown.js"></script>
+    <script src="/js/heart.js"></script>
+    <script src="/js/jquery.rainhearts.js"></script>
+    <script src="/js/jquery.confetti.js"></script>
+  </body>
+</html>

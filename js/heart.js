@@ -1,0 +1,5 @@
+let c = $('#heart')[0],
+    a = c.getContext('2d'),
+    imgHeart = `${window.appUrl}/assets/images/heart.png`;
+
+eval('let heart=new Image,M=Math,n=M.pow,i,E=2,F="rgba(233,61,109,",d=M.cos,z=M.sin,L=1,u=30,W=window,w=c.width=W.innerWidth,h=c.height=W.innerHeight,r=function(){return 2*M.random()-1},y="px Arial",v="♥",X=w/2,Y=h/2,T=0,p=function(){var n=this;n.g=function(){n.x=X,n.y=Y,n.k=0,n.l=0,n.t=19e3*M.random(),n.c=n.t},n.d=function(){a.globalAlpha=n.c/n.t,a.drawImage(heart,n.x,n.y,15,15),n.c-=50,n.x+=n.k,n.y+=n.l,n.k=n.k+r(),n.l=n.l+r(),(n.c<0||n.x>w||n.x<0||n.y>h||n.y<0)&&n.g()},n.g()},A,B;for(heart.src=imgHeart,i=0;i<350;i++)M[i]=new p;setInterval(function(){for(a.clearRect(0,0,w,h),a.font=u+y,X=w/6*n(z(T),3)+w/2,Y=.8*(-h/40*(13*d(T)-5*d(2*T)-2*d(3*T)-d(4*T))+h/2.3),T+=(z(T)+3)/99,i=0;i<350;i++)with(M[i])A=2*(x/w-.5),B=-(y/h-.5),L&&A*A+2*n(B-.5*n(M.abs(A),.5),2)>.11&&(k=l=0),d();a.font=120+y,E>.1&&(E-=.02),a.globalAlpha=1,a.drawImage(heart,X-35,Y-50,heart.width/1.5,heart.height/1.5)},50),document.body.addEventListener("click", function(){L=L?0:1})'.replace(/(_1)/g,'function('));
